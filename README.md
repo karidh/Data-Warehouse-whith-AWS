@@ -143,7 +143,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
 To realize sparkify's data warehouse, we implemented our code in four steps: 
 * *Step 1 (SQL Script) :* In this step, we writed SQL statement into python file to drop tables if exists before create each tables of our systeme.
 * *Step 2 (Execution of SQL statement):* After created different SQL statement, we writed another code to connect to the database and execute SQL statement to create these tables.
-* *Step 3 (ETL Script): We create another python code to connect to redsift cluster and load data from S3 bucket to staging tables that we created.
+* *Step 3 (ETL Script):* We create another python code to connect to redsift cluster and load data from S3 bucket to staging tables that we created.
 
 *Note: We created also a conf file to define datasets path and cluster parameters to them into different scripts.*  
 
