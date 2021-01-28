@@ -57,7 +57,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
 
 ##### c. Tables structures
 
--[x] **staging_events:**  load data from log_data dataset
+- **staging_events:**  load data from log_data dataset
 > events_key   INTEGER IDENTITY(0,1) NOT NULL,
    artist        VARCHAR,
    auth          VARCHAR    NOT NULL,
@@ -78,7 +78,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
    userAgent     VARCHAR,
    userId        INTEGER 
    
--[x] **staging_songs:** load data from song_data dataset
+- **staging_songs:** load data from song_data dataset
 > num_songs        INTEGER NOT NULL,
   artist_id        VARCHAR NOT NULL,
   artist_latitude  VARCHAR,
@@ -90,7 +90,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
   duration         DECIMAL NOT NULL,
   year             INTEGER NOT NULL
 
--[x] **songplay:** Fact Table
+- **songplay:** Fact Table
 >   songplay_id   INTEGER IDENTITY(0,1) PRIMARY KEY NOT NULL,
     start_time    TIMESTAMP  NOT NULL sortkey,
     user_id       INTEGER,
@@ -101,7 +101,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
     location      VARCHAR,
     user_agent    VARCHAR
  
--[x] **users:** Dim table
+- **users:** Dim table
 >(user_key   INTEGER IDENTITY(0,1) NOT NULL PRIMARY KEY,
  user_id    INTEGER  sortkey,
  first_name VARCHAR,
@@ -110,7 +110,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
  level      VARCHAR(4) NOT NULL
 )diststyle all
 
--[x] **songs:** Dim table
+- **songs:** Dim table
 >(song_id    VARCHAR NOT NULL PRIMARY KEY sortkey,
      title      VARCHAR NOT NULL,
      artist_id  VARCHAR NOT NULL,
@@ -118,7 +118,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
      duration   DECIMAL NOT NULL
      )diststyle all
  
--[x] **artists:** Dim table
+- **artists:** Dim table
 >artist_id VARCHAR NOT NULL PRIMARY KEY sortkey,
  name      VARCHAR,
  location  VARCHAR,
@@ -126,7 +126,7 @@ As the fact table add a new row whenever an event happen in the streaming music,
  longitude VARCHAR
  )diststyle all
  
- -[x] **times:** Dim table 
+ - **times:** Dim table 
 > (ts       BIGINT NOT NULL PRIMARY KEY sortkey,
  start_time TIMESTAMP NOT NULL,
  hour       INTEGER NOT NULL,
